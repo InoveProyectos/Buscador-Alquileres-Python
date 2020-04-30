@@ -57,6 +57,8 @@ http://inove.pythonanywhere.com/prediccion
 Espero hayan disfrutado de esta aplicación, cualquier duda o sugerencia pueden contartarse con Inove al mail info@inove.com.ar
 o ingresar a nuestra página [Inove](http://inove.com.com).
 
+![Facebook](/assets/facebook.png)
+
 Tambíen puedes encontrarnos en las redes\
 
 [![alt text][1.1]][1]
@@ -67,7 +69,7 @@ Tambíen puedes encontrarnos en las redes\
 [![alt text][6.1]][6]
 
 [1.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-[2.1]: ![Facebook](/assets/facebook.png) (google plus icon with padding)
+[2.1]: ![Facebook](/assets/facebook.png)
 [3.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
 [4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
 [5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
