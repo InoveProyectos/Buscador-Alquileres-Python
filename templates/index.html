@@ -1,1 +1,93 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Inove Seminario Python</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <body>
+	<div class="inove_logo">
+		<input class="inovebtn" type="button" onclick="location.href='https://inove.com.ar/'"></div>
+	<div class="texto_titulo">Aplicación en Python</div>
+	<div class="texto_parrafo">Esta aplicación aprovecha la API de Mercadolibre para el análisis de los datos de los
+		alquileres en la zona de Ciudad Autónoma de Buenos Aires, en Argentina.
+	</div>
+	
+	<div id="mapdiv" class="mapdiv"></div>
+	<div class="texto_parrafo">Hernan Contigiani para inove</div>
+ 
 
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			width: 100%;
+			height: 100%;
+			background-image: url(https://wallpaperplay.com/walls/full/8/4/3/77590.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			margin: 0;
+			padding: 0;
+			/*background-color: rgb(0, 255, 213);*/
+		}
+
+		/* ========== DEMO STYLES ========== */
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+
+		}
+
+		.inove_logo {
+			background-color: black;
+		}
+
+		.inovebtn {
+			background-color: black;
+			border-color: black;
+			background-image: url("https://inove.com.ar/wp-content/uploads/2020/03/cropped-3-1-200x87.png");
+			resize: 10px,10px;
+			background-repeat: no-repeat;
+			height: 90px;
+			width: 200px;
+			background-position: center;
+
+		}
+
+		.texto_titulo {
+			font-family: 'Open Sans';
+			font-size: 30px;
+			color: mintcream;
+			padding: 0%;
+			padding-left: 2%;
+
+			/*background-color: blueviolet;*/
+		}
+
+		.texto_parrafo {
+			font-family: 'Open Sans';
+			font-size: 12px;
+			color: mintcream;
+			padding: 0%;
+			padding-left: 2%;
+			/*background-color: blueviolet;*/
+
+		}
+
+		.mapdiv {
+			box-sizing: border-box;
+			margin: 100px auto;
+			padding: 2%;
+		}
+	</style>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename="js/mapload.js")}}"></script>
+  
+</body></html>
