@@ -1,7 +1,7 @@
 ![Inove banner](/inove.jpg)
 Inove Escuela de Código - Trabajamos en pos de que nuestros alumnos logren sus metras personales y profesionales
 info@inove.com.ar
-[Inove](http://inove.com.com)
+Web: [Inove](http://inove.com.com)
 
 # Buscador-Alquileres-Python
 API hecha en Python para buscar alquileres de departamentos y visualizarnos en un mapa
@@ -58,6 +58,13 @@ Espero hayan disfrutado de esta aplicación, cualquier duda o sugerencia pueden 
 o ingresar a nuestra página [Inove](http://inove.com.com).
 
 Tambíen puedes encontrarnos en las redes
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+[![alt text][3.1]][3]
+[![alt text][4.1]][4]
+[![alt text][5.1]][5]
+[![alt text][6.1]][6]
+
 [1.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
 [2.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)
 [3.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
