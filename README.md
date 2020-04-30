@@ -57,29 +57,22 @@ http://inove.pythonanywhere.com/prediccion
 Espero hayan disfrutado de esta aplicación, cualquier duda o sugerencia pueden contartarse con Inove al mail info@inove.com.ar
 o ingresar a nuestra página [Inove](http://inove.com.com).
 
-![Facebook](/assets/facebook.png)
-
-Tambíen puedes encontrarnos en las redes\
+Seguinos en las redes
 
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
 [![alt text][3.1]][3]
 [![alt text][4.1]][4]
 [![alt text][5.1]][5]
-[![alt text][6.1]][6]
 
-[1.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
-[2.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/facebook.png (twitter icon with padding)
-[3.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
-[4.1]: http://i.imgur.com/YckIOms.png (tumblr icon with padding)
-[5.1]: http://i.imgur.com/1AGmwO3.png (dribbble icon with padding)
-[6.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
+[1.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/facebook.png
+[2.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/instagram.png
+[3.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/twitter.png
+[4.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/linkedin.png
+[5.1]: https://github.com/InoveProyectos/Buscador-Alquileres-Python/blob/master/assets/youtube.png
 
 [1]: https://web.facebook.com/inovecode/
-[2]: https://plus.google.com/+CarlSednaoui
+[2]: https://www.instagram.com/inovecode/
 [3]: https://twitter.com/inovecode
-[4]: http://carlsed.tumblr.com
-[5]: http://dribbble.com/carlsednaoui
-[6]: http://www.github.com/carlsednaoui
-
-
+[4]: https://www.linkedin.com/company/inovecode/
+[5]: https://www.youtube.com/channel/UCwMey2qq3SDpS2Sl3CnjLEA/featured
