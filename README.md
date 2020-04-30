@@ -53,7 +53,7 @@ http://inove.pythonanywhere.com/prediccion
 
 ![Inove banner](/images/prediccion.png)
 
-# Finalizamos
+# Muchas gracias!
 Espero hayan disfrutado de esta aplicación, cualquier duda o sugerencia pueden contartarse con Inove al mail info@inove.com.ar
 o ingresar a nuestra página [Inove](http://inove.com.com).
 
