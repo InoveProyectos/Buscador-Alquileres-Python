@@ -4,10 +4,10 @@ info@inove.com.ar\
 Web: [Inove](http://inove.com.com)
 
 # Buscador-Alquileres-Python
-API hecha en Python para buscar alquileres de departamentos y visualizarnos en un mapa
+API hecha en Python para buscar alquileres de departamentos y visualizarlos en un mapa
 
-# Descripcion:
-Esta aplicacion hecha en Python utiliza Flask para crear un WebServer que levanta los datos de alquileres de inmuebles
+# Descripción:
+Esta aplicación hecha en Python utiliza Flask para crear un WebServer que levanta los datos de alquileres de inmuebles
 y los presenta en un mapa distribuidos por su ubicación.\
 Además, los alquileres se identifican con colores en el mapa según el precio y relación con la media.
 
@@ -15,7 +15,7 @@ Además, los alquileres se identifican con colores en el mapa según el precio y
 Si desean probar como funciona este programa sin necesidad de descargar el código pueden ingresar al siguiente link:\
 [inove.api](http://inove.pythonanywhere.com/)
 
-Luego para utilizar la API les recomiendo que lean la sección de "Como utilizar la API".
+Luego para utilizar la API les recomiendo que lean la sección de "__Como utilizar la API__".
 
 # Lanzar la API
 Para lanzar el programa debemos ejecutar el script de python en nuestra consola:\
