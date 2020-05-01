@@ -108,7 +108,7 @@ class mercadolibreAPI:
  
     def search(self, objeto, pages_to_load = 0):
         self.objeto = objeto()
-        parameters = '&q=Departamentos%20Alquiler%20'+re.sub("[ ,.]", "%20F", self.objeto.ubicacion)
+        parameters = '&q=Departamentos%20Alquiler%20'+re.sub("[ ,.]", "%20", self.objeto.ubicacion)
         url = self.meli_url + self.objeto.mercadolibre_id + parameters 
         print("Buscando: " + url)
         if(self.debug):
