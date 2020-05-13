@@ -39,7 +39,7 @@ __Versión offline__\
 http://127.0.0.1:5000/reporte
 
 __Versión online__\
-http://inove.pythonanywhere.com/repote
+http://inove.pythonanywhere.com/reporte
 
 ![Inove banner](/images/reporte.png)
 
