@@ -1,5 +1,5 @@
 
-var url = window.location.href + 'propiedades'
+var url = window.location.href + '/propiedades'
 
 $.get(url, function(list) {
 	
