@@ -29,13 +29,13 @@ __author__ = "Inove Coding School"
 __email__ = "INFO@INOVE.COM.AR"
 __version__ = "1.0"
 
-
 import requests                     # Bajada de datos URL
 import json                         # La API utiliza Json para transmitir datos
 import pandas as pd
 import re                           # RegExp
 from time import gmtime, strftime   # Para obtener la fecha actual
- 
+
+
 class inmueble:
     #mercadolibre_id = 'MLA79242' # Locales
     #mercadolibre_id = 'MLA79243' # Alquiler
@@ -43,6 +43,10 @@ class inmueble:
     ubicacion = 'Capital Federal'
     columnas = ['fecha', 'latitud', 'longitud', 'url', 'titulo', 'tipo_propiedad', 'precio', 'moneda', 'm2', 'ambientes']
  
+    def __init__(self, ubicacion='Capital Federal'):
+        self.ubicacion = ubicacion
+
+
     # Serializo de json a dataframe y rearmado de datos para que sea formato tabla
     def serialize(self, items):
         data = pd.DataFrame(items)
@@ -86,7 +90,8 @@ class inmueble:
                 pass            
         data = data.fillna('') # Los nulos los completamos con un string vacio
         return data[self.columnas]
- 
+
+
 class mercadolibreAPI:
     debug = False # Limita el procesamiento a los primeros elementos del primer indice, habilida la salida por pantalla de mensajes
     query = None 
@@ -106,18 +111,19 @@ class mercadolibreAPI:
         except:
             return None
  
-    def search(self, objeto, pages_to_load = 0):
-        self.objeto = objeto()
+    def search(self, objeto, ubicacion, pages_to_load = 0):
+        self.objeto = objeto(ubicacion)
         parameters = '&q=Departamentos%20Alquiler%20'+re.sub("[ ,.]", "%20", self.objeto.ubicacion)
         url = self.meli_url + self.objeto.mercadolibre_id + parameters 
         print("Buscando: " + url)
-        if(self.debug):
-            paginators = 5
+
+        if pages_to_load > 0:
+            paginators = pages_to_load
         else:
-            if pages_to_load == 0:
-                paginators = round(self.request_get(url)['paging']['total']/50)+1
+            if(self.debug):
+                paginators = 5
             else:
-                paginators = pages_to_load
+                paginators = round(self.request_get(url)['paging']['total']/50)+1
  
            
         for offset in range(0,paginators):
@@ -139,6 +145,8 @@ class mercadolibreAPI:
             self.export_sql()
         elif tipo.lower() == 'csv':
             self.export_csv()
+        elif tipo.lower() == 'df':
+            return self.export_df()
         else:
             print("No existe el metodo de exportacion: " + tipo.lower())
     
@@ -153,7 +161,10 @@ class mercadolibreAPI:
             if(self.debug): print("Guardando archivo", file_name)
             self.items.to_csv(file_name, sep=",", decimal=".")
 
-        
+    def export_df(self):
+        return self.items
+
+
 if __name__ == "__main__":
  
     meli = mercadolibreAPI()

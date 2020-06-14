@@ -38,28 +38,33 @@ __author__ = "Inove Coding School"
 __email__ = "INFO@INOVE.COM.AR"
 __version__ = "1.0"
 
-import reporte as rp
 
-from flask import Flask, request, jsonify, render_template, Response
 import pandas as pd
 import numpy as np
 import traceback
-
 import io
+
+from flask import Flask, request, jsonify, render_template, Response, redirect
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
-
 import matplotlib.pyplot as plt
 from sklearn import linear_model
+
+import reporte as rp
+import meli as ml
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
+    return redirect('/alquileres')
+
+@app.route("/alquileres")
+def alquileres():
     return render_template('index.html')
 
-@app.route('/propiedades') # Your API endpoint URL would consist /predict
+@app.route('/alquileres/propiedades') # Your API endpoint URL would consist /predict
 def propiedades():
     try:
         df = pd.read_csv("propiedades.csv")
@@ -84,7 +89,7 @@ def propiedades():
     except:
         return jsonify({'trace': traceback.format_exc()})
 
-@app.route('/reporte') # Your API endpoint URL would consist /predict
+@app.route('/alquileres/reporte') # Your API endpoint URL would consist /predict
 def reporte():
     try:
         # Utilizo el programa de reporte para generar el gráfico y mostrarlo en la web
@@ -96,7 +101,7 @@ def reporte():
     except:
         return jsonify({'trace': traceback.format_exc()})
 
-@app.route('/prediccion') # Your API endpoint URL would consist /predict
+@app.route('/alquileres/prediccion') # Your API endpoint URL would consist /predict
 def prediccion():
     try:
         # Utilizo el programa de reporte para generar el gráfico y mostrarlo en la web
@@ -105,6 +110,29 @@ def prediccion():
         output = io.BytesIO()
         FigureCanvas(fig).print_png(output)
         return Response(output.getvalue(), mimetype='image/png')
+    except:
+        return jsonify({'trace': traceback.format_exc()})
+
+@app.route('/alquileres/buscar') # Your API endpoint URL would consist /predict
+def buscar():
+    try:
+        # Utilizo el modulo "meli" para generar un archivo CSV con los alquileres
+
+        ubicacion = request.args.get('ubicacion')
+        if ubicacion is None:
+            ubicacion = 'Capital Federal'
+
+        meli = ml.mercadolibreAPI()
+        meli.set_debug(True)
+        meli.search(ml.inmueble, ubicacion, 10)
+        df = meli.export('df')
+
+        return Response(
+            df.to_csv(),
+            mimetype="text/csv",
+            headers={"Content-disposition":
+            "attachment; filename=propiedades.csv"})
+
     except:
         return jsonify({'trace': traceback.format_exc()})
 
