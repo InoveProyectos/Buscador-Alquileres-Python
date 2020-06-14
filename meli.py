@@ -169,6 +169,6 @@ if __name__ == "__main__":
  
     meli = mercadolibreAPI()
     meli.set_debug(False)
-    meli.search(inmueble)
+    meli.search(inmueble, 'Capital Federal')
     meli.export()
     print("Fin")
