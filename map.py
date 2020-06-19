@@ -39,11 +39,12 @@ __email__ = "INFO@INOVE.COM.AR"
 __version__ = "1.0"
 
 
-import pandas as pd
-import numpy as np
 import traceback
 import io
+import sys
 
+import pandas as pd
+import numpy as np
 from flask import Flask, request, jsonify, render_template, Response, redirect
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
